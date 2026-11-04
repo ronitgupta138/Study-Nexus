@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  study-nexus:
+    build: .
+    container_name: study-nexus
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - ./notes:/app/notes
+    stdin_open: true
+    tty: true
